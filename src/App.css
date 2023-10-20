@@ -1,0 +1,90 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+section{
+  display: flex;
+  height: 80vh;
+  width: 100vh;
+}
+
+.left{
+  flex: 1;
+}
+.right{
+  flex: 2;
+}
+
+.User-List-Div {
+  padding: 20px;
+}
+
+.User-List {
+  background-color: #364547;
+  margin-bottom: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.User-List-item {
+  color: #e9dfdfe6;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.Accounts-input {
+  margin-bottom: 10px;
+}
+
+.Submit-btn {
+  margin-left: 18px;
+}
+
+.chart {
+  margin-left: 20px;
+}
