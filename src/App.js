@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import "./App.css";
 import { Line } from "react-chartjs-2";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "./redux/slices/accountSlice";
+import "./App.css";
+
 import {
     Chart as ChartJS,
     Title,
@@ -23,9 +26,12 @@ ChartJS.register(
 );
 
 function App() {
-    const [accountArray, setAccountArray] = useState([]);
+    const dispatch = useDispatch();
+
+    const items = useSelector((state) => state);
+
     const [monthlyPayment, setMonthlyPayment] = useState(450);
-    const [initialBalance, setInitialBalance] = useState(5000); // Initial balance state
+    const [initialBalance, setInitialBalance] = useState(5000);
 
     const [chartData, setChartData] = useState({
         labels: [
@@ -102,24 +108,22 @@ function App() {
     };
 
     const handleAccountSubmit = () => {
-        const enteredBalance = Number(
-            document.getElementById("balanceInput").value
+        dispatch(
+            addItem(Number(document.getElementById("balanceInput").value))
         );
-        setAccountArray((prevArray) => [...prevArray, enteredBalance]);
-
         document.getElementById("balanceInput").value = "";
     };
 
     const handleUserItemClick = (balance) => {
-        setInitialBalance(balance); // Update the initialBalance when a User-List-item is clicked
+        setInitialBalance(balance);
     };
 
     return (
         <>
-            <section>
+            <div className="container">
                 <div className="left">
                     <h1>Accounts</h1>
-                    <div className="div">{`Count: ${accountArray.length}`}</div>
+                    <div className="div">{`Count: ${items.account.length}`}</div>
                     <span>Enter Balance: </span>
                     <input
                         className="Accounts-input"
@@ -127,18 +131,17 @@ function App() {
                         id="balanceInput"
                     />
                     <button
-                        className="Submit-btn"
+                        className="Submit-btn-1"
                         onClick={handleAccountSubmit}
                     >
                         Submit
                     </button>
 
                     <ol className="User-List-Div">
-                        {accountArray.map((item, index) => (
-                            <div className="User-List">
+                        {(items.account ?? []).map((item, index) => (
+                            <div className="User-List" key={index}>
                                 <li
                                     className="User-List-item"
-                                    key={index}
                                     onClick={() => handleUserItemClick(item)}
                                 >
                                     {item}
@@ -163,14 +166,16 @@ function App() {
                             Submit
                         </button>
 
-                        <div>Balance of account after number of months</div>
+                        <div className="line-chart-heading">
+                            Balance of account after number of months
+                        </div>
 
                         <div className="chart">
-                            <Line data={chartData} options={options} />
+                            <Line className="line-chart" data={chartData} options={options} />
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </>
     );
 }
