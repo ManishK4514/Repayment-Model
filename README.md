@@ -1,70 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Repayment: A Payment Model App](https://repayment.vercel.app/)
+https://github.com/ManishK4514/Repayment-Model/assets/108109935/96073239-00ee-4530-9874-dba39f70ee1b
 
-## Available Scripts
+![line]
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack Used](#tech-stack-used)
+- [Installation](#installation)
+- [Preview](#preview)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![line]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Introduction
 
-### `npm test`
+- Repayment is a payment model application that allows users to see the Account Balance and the monthly Payment through a line Chart.
+![line]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **User Account Creation**: Users can create their account with a particular balance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Monthly Payment**: User can see Their Monthly payment through the line Chart.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **User Account Details**: When Users refresh the page the User Account information will be still there because we are using redux persist.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![line]
 
-### `npm run eject`
+## Tech Stack Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React.js: Front-End Framework
+- Node.js: Back-End Runtime
+- Redux-persist: To Store User Information
+- Git & Github: Version Control
+- Vercel: Frontend Hosting
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![line]
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To set up and run the SocioDot application locally, follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clone the repository:
 
-### Code Splitting
+      git clone https://github.com/your-username/Repayment-Model.git
+    
+- Install the dependencies in both the client-side and server-side directories:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+      npm install
+  
+- Starting the Application
 
-### Analyzing the Bundle Size
+      npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Access the application 🌍
 
-### Making a Progressive Web App
+Open your web browser and visit `http://localhost:your_port(e.g: 3000)` to access the SocioDot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Please refer to the project's documentation or README files for detailed instructions on setting up and running the application locally.
 
-### Advanced Configuration
+![line]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Preview
+![image](https://github.com/ManishK4514/Repayment-Model/assets/108109935/07fc1808-0b79-466c-a0fe-23ea4bb1ad62)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[line]: https://user-images.githubusercontent.com/75939390/137615281-3a875960-92cc-407f-97fe-fd2319bdb252.png
+[badges]: https://github.com/Ileriayo/markdown-badges
